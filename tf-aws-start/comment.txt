@@ -1,0 +1,29 @@
+/*
+kroz header da se posalje key/secret  
+direktno za AWS da se veze security rola
+---
+telo poruke
+
+CampainIntegretionId u 
+
+Snimiti kao jedno nivojska struktura
+Ne menjati tabelu
+Ubaciti sve u jednu tabelu
+eventualno u tabelu ubaciti dodatne atribute koje bi prikazali sledljivost poruka
+
+
+primer:
+lambda koja prima poruku na njihov nacin
+i posle sa obraca nasoj dosadasnjoj strukturi
+
+
+Ceo JSON se loguje
+
+Autentakaciju preko header-a
+
+odgovor:
+ sreda - samo odgovor ne i resenje
+
+*/
+
+https://www.youtube.com/watch?v=V-ac_ZvdAW4
