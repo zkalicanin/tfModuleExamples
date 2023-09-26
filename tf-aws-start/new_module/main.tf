@@ -1,7 +1,5 @@
-
-
 resource "aws_instance" "sample" {
-  ami = data.aws_ami.ubuntu.id
+  ami = data.ec2_ami_id
   instance_type = var.ec2_instance_type
 
   tags = {

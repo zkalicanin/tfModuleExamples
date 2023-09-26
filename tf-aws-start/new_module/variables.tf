@@ -12,3 +12,8 @@ variable "number_of_instances" {
   default = 1
   type = number
 }
+
+variable "ec2_ami_id" {
+  type = string
+}
+  

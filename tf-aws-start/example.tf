@@ -1,4 +1,18 @@
+data "aws_ami" "ubuntu" {
+  most_recent = true
 
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
+  owners = ["099720109477"] # Canonical
+}
 
 resource "aws_instance" "sample" {
   ami = data.aws_ami.ubuntu.id
@@ -29,6 +43,19 @@ module "vpc" {
   public_subnets  = ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"]
 
   enable_nat_gateway = true
+}
+
+module "my_ec2_instance" {
+  source = "./new_module"
+
+  ec2_instance_type = var.ec2_instance_type
+  ec2_insance_name = var.ec2_instance_name
+  number_of_instances = var.number_of_instances
+  ec2_ami_id = data.aws_ami.ubuntu.id
+}
+
+output "instance_id" {
+  value = module.my_ec2_instance.ec2_instance_id
 }
 
 
