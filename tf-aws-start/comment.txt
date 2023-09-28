@@ -33,3 +33,7 @@ https://www.youtube.com/watch?v=V-ac_ZvdAW4
 
 Next
 https://www.youtube.com/watch?v=POM73N3Vgw0
+
+
+Creating a serverless website using Terraform | AWS | Lambda | API Gateway
+https://www.youtube.com/watch?v=wlVcso4Ut5o&t=1s
